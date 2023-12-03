@@ -8,7 +8,7 @@
         <form action="{{route('animes.update', ['anime' => $anime->id])}}" method="post">
             @csrf
             <input  type="hidden" name="__method" id="PUT">
-            <input class="border-1 w-44 rounded-lg p-2 m-4" type="text" name="name" id="name">
+            <input class="border-1 w-44 rounded-lg p-2 m-4" type="text" name="name" id="name" value="{{ $anime->name }}">
             <input class="border-1 w-36 rounded-lg p-2 m-4" type="file" name="image" id="image">
             <button type="submit" class="bg-orange-500 dark:bg-white">
                 Salvar

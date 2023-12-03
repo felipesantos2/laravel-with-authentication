@@ -14,27 +14,31 @@ class AnimeController extends Controller
      */
     public function index()
     {
-        return view('site.animes', [
-            'animes' => [
-                '1' => 'Akame ga kill',
-                '2' => 'One Punch Man',
-                '3' =>  'Dragon Ball',
-                '4' =>  'Dragon Ball Z',
-                '5' =>  'Dragon Ball Kai',
-                '5' =>  'Dragon Ball GT',
-                '5' =>  'Dragon Ball Super',
-                '6' =>  'Super Onze',
-                '7' =>  'Pokemon',
-                '8' =>  'Mob Psycho 100',
-                '9' =>  'Hunter x Hunter',
-                '10' =>  'Shangri-la Frontier',
-                '11' =>  'Sword Art online',
-                '12' =>  'Akuma-kun',
-                '13' =>  'Naruto',
-                '14' =>  'Naruto Shippuden',
-                '15' =>  'Boruto: Naruto Next generation',
-            ]
-        ]);
+        return view('site.animes',
+            // [
+            //     'animes' => [
+            //         '1' => 'Akame ga kill',
+            //         '2' => 'One Punch Man',
+            //         '3' =>  'Dragon Ball',
+            //         '4' =>  'Dragon Ball Z',
+            //         '5' =>  'Dragon Ball Kai',
+            //         '5' =>  'Dragon Ball GT',
+            //         '5' =>  'Dragon Ball Super',
+            //         '6' =>  'Super Onze',
+            //         '7' =>  'Pokemon',
+            //         '8' =>  'Mob Psycho 100',
+            //         '9' =>  'Hunter x Hunter',
+            //         '10' =>  'Shangri-la Frontier',
+            //         '11' =>  'Sword Art online',
+            //         '12' =>  'Akuma-kun',
+            //         '13' =>  'Naruto',
+            //         '14' =>  'Naruto Shippuden',
+            //         '15' =>  'Boruto: Naruto Next generation',
+            //     ]
+            // ]
+
+            ['animes' => Anime::all()]
+        );
     }
 
     /**
@@ -64,10 +68,10 @@ class AnimeController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string|int $anime)
+    public function edit(Anime $anime)
     {
         return view('site.anime-edit', [
-            'anime' => Anime::all($anime),
+            'anime' => $anime,
         ]);
     }
 

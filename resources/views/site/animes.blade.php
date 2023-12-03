@@ -7,10 +7,10 @@
     <div class="max-w-full w-3/4 mx-auto">
         @foreach ($animes as $anime)
             <span class="text-white font-semibold">
-                {{ $anime }}
+                {{ $anime->name }}
                 |
             </span>
-            <a href="{{ route('animes.edit', ['anime' => $anime])}}" class="text-green font-semibold"> Editar </a>
+            <a href="{{ route('animes.edit', ['anime' => $anime->id])}}" class="text-green font-semibold"> Editar </a>
             <br>
         @endforeach
     </div>
