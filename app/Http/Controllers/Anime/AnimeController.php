@@ -80,7 +80,7 @@ class AnimeController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        dd($request->all());
     }
 
     /**
