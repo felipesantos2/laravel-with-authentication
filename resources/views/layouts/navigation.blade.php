@@ -12,9 +12,14 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+
+                    <x-nav-link :href="route('animes.index')" :active="request()->routeIs('animes.index')">
+                        {{ __('Animes') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('animes.create')" :active="request()->routeIs('animes.create')">
+                        {{ __('Novo') }}
+                    </x-nav-link>
+
                 </div>
             </div>
 

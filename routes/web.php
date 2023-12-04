@@ -25,6 +25,7 @@ Route::controller(AnimeController::class)->prefix('/animes')->group( function() 
     Route::get('/', 'index')->name('animes.index');
     Route::get('/{anime}/edit', 'edit')->name('animes.edit');
     Route::put('/{anime}', 'edit')->name('animes.update');
+    Route::get('/create', 'create')->name('animes.create');
 });
 
 Route::get('/dashboard', function () {

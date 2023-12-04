@@ -46,7 +46,7 @@ class AnimeController extends Controller
      */
     public function create()
     {
-        //
+        return view('site.anime-create');
     }
 
     /**
