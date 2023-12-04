@@ -38,4 +38,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+Route::get('/livewire/create', App\Livewire\Animes\AnimeCreate::class);
+
 require __DIR__.'/auth.php';
