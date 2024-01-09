@@ -12,7 +12,7 @@ class HomeController extends Controller
     public function index(): View
     {
         return view('home',
-        ['animes' => Anime::all()]
+            ['animes' => Anime::all()]
         );
     }
 }
